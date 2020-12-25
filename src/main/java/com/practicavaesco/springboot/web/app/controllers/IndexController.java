@@ -8,6 +8,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.practicavaesco.springboot.web.app.models.Usuario;
+
 /**
  * @author thece
  *
@@ -24,5 +26,15 @@ public class IndexController {
 	}
 	
 	
+	@GetMapping("/perfil")
+	public String perfil(Model model) {
+		Usuario usuario = new Usuario();
+		usuario.setNombre("César");
+		usuario.setApellido("Vargas");
+		model.addAttribute("titulo", "Perfil del usuario: ".concat(usuario.getNombre()));
+		model.addAttribute("usuario", usuario);
+
+		return "perfil";
+	}
 
 }
