@@ -4,6 +4,7 @@
 package com.practicavaesco.springboot.web.app.controllers;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import org.springframework.stereotype.Controller;
@@ -20,15 +21,14 @@ import com.practicavaesco.springboot.web.app.models.Usuario;
 @Controller
 @RequestMapping("/app")
 public class IndexController {
-	
-	@GetMapping({"/index","/home","/",""})
+
+	@GetMapping({ "/index", "/home", "/", "" })
 	public String index(Model model) {
 		model.addAttribute("titulo", "Hola Mundo con Spring!");
 		model.addAttribute("parrafo", "Pasando datos con la interfaz Model");
 		return "index";
 	}
-	
-	
+
 	@GetMapping("/perfil")
 	public String perfil(Model model) {
 		Usuario usuario = new Usuario();
@@ -40,15 +40,16 @@ public class IndexController {
 
 		return "perfil";
 	}
+
 	@GetMapping("/listar")
 	public String listar(Model model) {
-		
-		List<Usuario> usuarios = new ArrayList<>();
-		usuarios.add(new Usuario("Raúl","Galarraga","raul@correo.com"));
-		usuarios.add(new Usuario("Martha","de la Cruz","martha@correo.com"));
-		usuarios.add(new Usuario("Laura","Diaz","laura@correo.com"));
-		usuarios.add(new Usuario("Mateo","Sanchéz","mateo@correo.com"));
-		usuarios.add(new Usuario("Luisa","Perez","luisa@correo.com"));
+
+		List<Usuario> usuarios = Arrays.asList(new Usuario("Raúl", "Galarraga", "raul@correo.com"),
+				new Usuario("Martha", "de la Cruz", "martha@correo.com"),
+				new Usuario("Laura", "Diaz", "laura@correo.com"), 
+				new Usuario("Mateo", "Sanchéz", "mateo@correo.com"),
+				new Usuario("Luisa", "Perez", "luisa@correo.com"));
+
 		model.addAttribute("titulo", "Listado de usuarios");
 		model.addAttribute("usuarios", usuarios);
 		return "listar";
