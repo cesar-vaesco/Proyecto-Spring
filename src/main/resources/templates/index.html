@@ -3,13 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <title th:text="${titulo}"></title>
+<link th:href="@{/css/style.css}" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-	<h1 th:text="${titulo}"></h1>
-	<h3 th:text="${parrafo}"></h3>
+	<h1 class="color-rojo" th:text="${titulo}"></h1>
+	<h2 class="color-cafe">Inyectando estilos con thymealef</h2>
+	<h3 class="color-verde" th:text="${parrafo}"></h3>
+ 
 
 	<ul>
-		<li><a th:href="@{/params/}">Regresar -- Rutas de la app</a></li>
+		<li><a class="color-azul"th:href="@{/params/}">Regresar -- Rutas de la app</a></li>
 	</ul>
 
 </body>

@@ -1,0 +1,19 @@
+h1.color-rojo{
+	color:red;
+}
+
+h2.color-cafe{
+	color:brown;
+}
+
+h3.color-verde{
+	color:green;
+}
+
+a.color-azul{
+	color:blue;
+}
+
+a{
+	text-decoration:none;
+}
