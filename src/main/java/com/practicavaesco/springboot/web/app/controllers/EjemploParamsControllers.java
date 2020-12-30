@@ -12,8 +12,9 @@ public class EjemploParamsControllers {
 	
 	
 	//Ejemplo de petición: http://localhost:8200/params/string?texto=%22Hola%20C%C3%A9sar%22
+	//Se puede declarar que el parametro no sea requerido(required= false) o que tenga un valor por defecto  defaultValue = "Algún valor..."
 	@GetMapping("/string")
-	public String param(@RequestParam(name ="texto") String texto, Model model) {
+	public String param(@RequestParam(name ="texto", defaultValue = "Soy la flor que marchito el olvido") String texto, Model model) {
 		model.addAttribute("resultado", "El texto enviado es: " + texto);
 		return "params/ver";
 	}
