@@ -11,5 +11,9 @@
 	<br>
 	<span th:if="${usuario.email}" th:text="${usuario.email}"></span>	
 	<span th:if="${usuario.email == null}">El usuario no tienen correo....</span>	
+	
+	<ul>
+		<li><a th:href="@{/params/}">Regresar -- Rutas de la app</a></li>
+	</ul>
 </body>
 </html>

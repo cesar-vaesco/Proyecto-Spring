@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymealef.org">
+<head>
+<meta charset="UTF-8">
+<title th:text="${titulo}"></title>
+</head>
+<body>
+	<h1 th:text="${titulo}"></h1><br>
+	
+	<ul>
+		<li><a th:href="@{/variables/string/} + 'Hola César '">/variables/string/Hola César</a></li>
+		<li><a th:href="@{/variables/string/} + 'Qué tal Vero '">/variables/string/Qué tal Vero</a></li>
+		<li><a  th:href="@{/variables/string/} + 'Saludos César '+ '/' + '25'">/variables/string/Saludos César/25</a></li>
+	</ul>
+
+	<ul>
+		<li><a style="text-decoration:none" th:href="@{/params/}">Regresar -- Rutas de la app</a></li>
+	</ul>
+
+</body>
+</html>
