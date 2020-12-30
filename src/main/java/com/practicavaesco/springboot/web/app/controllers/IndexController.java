@@ -3,13 +3,13 @@
  */
 package com.practicavaesco.springboot.web.app.controllers;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.practicavaesco.springboot.web.app.models.Usuario;
@@ -43,16 +43,20 @@ public class IndexController {
 
 	@GetMapping("/listar")
 	public String listar(Model model) {
-
+		model.addAttribute("titulo", "Listado de usuarios");
+		return "listar";
+	}
+	
+	
+	
+	@ModelAttribute("usuarios")
+	public List<Usuario> poblarUsuarios(){
 		List<Usuario> usuarios = Arrays.asList(new Usuario("Raúl", "Galarraga", "raul@correo.com"),
 				new Usuario("Martha", "de la Cruz", "martha@correo.com"),
 				new Usuario("Laura", "Diaz", "laura@correo.com"), 
 				new Usuario("Mateo", "Sanchéz", "mateo@correo.com"),
 				new Usuario("Luisa", "Perez", "luisa@correo.com"));
-
-		model.addAttribute("titulo", "Listado de usuarios");
-		model.addAttribute("usuarios", usuarios);
-		return "listar";
+		return usuarios;
 	}
 
 }
