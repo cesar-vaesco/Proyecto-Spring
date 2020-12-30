@@ -11,6 +11,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class EjemploParamsControllers {
 	
 	
+	@GetMapping("/")
+	public String index() {
+		return "params/index";
+	}
+	
 	//Ejemplo de petición: http://localhost:8200/params/string?texto=%22Hola%20C%C3%A9sar%22
 	//Se puede declarar que el parametro no sea requerido(required= false) o que tenga un valor por defecto  defaultValue = "Algún valor..."
 	@GetMapping("/string")
