@@ -8,8 +8,10 @@
 	<h1>Enviar parámetros del request HTTP GET - URL</h1>
 
 	<ul>
+		<li><a th:href="@{/params/string(texto='')}">Ejemplo de envío de parametros vacios</a></li>
 		<li><a th:href="@{/params/string(texto='Hola César')}">/params/string?texto=Hola César</a></li>
 		<li><a th:href="@{/params/string(texto='Qué tal Vero!')}">Link para el saludo de Vero  --> /params/string?texto=Qué tal Vero!</a></li>
+		<li><a th:href="@{/params/mix-params(saludo='Cómo estas César', numero=25)}">/params/mix-params?saludo=Cómo estas César&numero=25!</a></li>
 	</ul>
 </body>
 </html>
