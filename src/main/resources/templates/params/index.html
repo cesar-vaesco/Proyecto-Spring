@@ -3,8 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <title>Enviar parámetros del request HTTP GET - URL</title>
+<link th:href="@{/css/style.css}" rel="stylesheet" type="text/css" />
 </head>
-<body>
+<body >
+<div >
 	<h1>Enviar parámetros del request HTTP GET - URL</h1>
 
 	<ul>
@@ -23,7 +25,7 @@
 	</ul>
 
 	<ul>
-		<h2>Otras rutas de la app</h2>
+		<h2 >Otras rutas de la app</h2>
 		<li><a th:href="@{/app/}">app/Index</a></li>
 		<li><a th:href="@{/app/perfil}">app/Perfil</a></li>
 		<li><a th:href="@{/app/listar}">app/Listar usuarios</a></li>
@@ -31,5 +33,6 @@
 		<li><a th:href="@{/variables/}">variables/Rutas de la carpeta @PathVariable</a></li>
 		
 	</ul>
+	</div>
 </body>
 </html>

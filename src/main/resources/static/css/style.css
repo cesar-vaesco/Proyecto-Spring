@@ -1,19 +1,30 @@
-h1.color-rojo{
-	color:red;
+/*ESpecificado por clase*/
+h1.color-rojo {
+	color: red;
+}
+/*GEneral a los h1*/
+h1 {
+	color: purple;
 }
 
-h2.color-cafe{
-	color:brown;
+h2.color-cafe {
+	color: brown;
 }
 
-h3.color-verde{
-	color:green;
+h2 {
+	color: red;
 }
 
-a.color-azul{
-	color:blue;
+h3.color-verde {
+	color: green;
 }
 
-a{
-	text-decoration:none;
+a.color-azul {
+	color: blue;
 }
+
+a {
+	text-decoration: none;
+	color: DodgerBlue;
+}
+
